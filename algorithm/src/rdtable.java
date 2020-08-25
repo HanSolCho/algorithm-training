@@ -1,8 +1,9 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//ìŠ¤ë„ì¿ ë¼ê³  ìƒê°í•˜ë©´ ë ë“¯í•¨
+// ìë°” ê³µë¶€ ì²˜ìŒí• ë•Œ ë§Œë“ ì½”ë“œë¼ forë¬¸ê³¼ ifë¬¸ì´ ë§ì•„ í° ìˆ«ìì˜ ìŠ¤ë„ì¿ ëŠ” ì‹¤íŒ¨ ì‘ì€ ìˆ«ìë§Œ ê°€ëŠ¥í•¨
 public class rdtable {
-//0Çà,0¿­ ¸ÕÀú ¼±¾ğ ÈÄ °¡Áö°í ºñ±³ÇÏ±â 
+//0í–‰,0ì—´ ë¨¼ì € ì„ ì–¸ í›„ ê°€ì§€ê³  ë¹„êµí•˜ê¸° 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			
@@ -13,13 +14,13 @@ public class rdtable {
 			Scanner sc = new Scanner(System.in);
 			Random rd = new Random();
 			
-			System.out.println("nxnÇà·Ä, nÀ» ÀÔ·ÂÇÏ½Ã¿À");
+			System.out.println("nxní–‰ë ¬, nì„ ì…ë ¥í•˜ì‹œì˜¤");
 			n = sc.nextInt();
 			int table[][]= new int[n][n];
 			//int table2[][]= new int[n][n];
 			
-			for(int j=0;j<n;j=j+1) {   //¼¼·Î ¹İº¹
-				for(int i=0;i<n;i=i+1) {  //°¡·Î ¹İº¹
+			for(int j=0;j<n;j=j+1) {   //ì„¸ë¡œ ë°˜ë³µ
+				for(int i=0;i<n;i=i+1) {  //ê°€ë¡œ ë°˜ë³µ
 					if(i==0&&j==0) {// 0,0
 						table[j][i]=rd.nextInt(n);
 					//	table2[j][i]= table[j][i];
@@ -28,7 +29,7 @@ public class rdtable {
 						table[j][i]=rd.nextInt(n);
 						for(int b=0;b<i;b=b+1) {
 							if(table[j][i]==table[j][b]) {
-								System.out.println("Áßº¹1");
+								System.out.println("ì¤‘ë³µ1");
 								i=i-1;
 							}
 						}
@@ -37,7 +38,7 @@ public class rdtable {
 						table[j][i]=rd.nextInt(n);
 						for(int a=0;a<j;a=a+1) {
 							if(table[j][i]==table[a][i]) {
-								System.out.println("Áßº¹2");
+								System.out.println("ì¤‘ë³µ2");
 								j=j-1;
 							}
 						}
@@ -46,14 +47,14 @@ public class rdtable {
 						table[j][i]=rd.nextInt(n);
 						for(int a=0;a<j;a=a+1) {
 								if(table[j][i]==table[a][i]) {
-									System.out.println("Áßº¹3");
+									System.out.println("ì¤‘ë³µ3");
 									j=j-1;
 								}
 							}
 						}
 						for(int b=0;b<i;b=b+1) {
 							if(table[j][i]==table[j][b]) {
-								System.out.println("Áßº¹4");
+								System.out.println("ì¤‘ë³µ4");
 								i=i-1;
 					}
 					}
@@ -62,14 +63,14 @@ public class rdtable {
 			}
 			
 			
-		/*for(int j=0;j<n;j=j+1) {   //¼¼·Î ¹İº¹
-			for(int i=0;i<n;i=i+1) {  //°¡·Î ¹İº¹
-				table[j][i] = rd.nextInt(n);  //³­¼ö ³Ö±â``
-				if(j>0||i>0) { //j,i°¡ µÑ´Ù 0ÀÏ¶§ ¹«ÇÑ ·çÇÁ ¹æÁö
-				for(int q=0;q<j;q=q+1) { //table2¼¼·Î
-					for(int p=0;p<i;p=p+1) { // table2 °¡·Î
+		/*for(int j=0;j<n;j=j+1) {   //ì„¸ë¡œ ë°˜ë³µ
+			for(int i=0;i<n;i=i+1) {  //ê°€ë¡œ ë°˜ë³µ
+				table[j][i] = rd.nextInt(n);  //ë‚œìˆ˜ ë„£ê¸°``
+				if(j>0||i>0) { //j,iê°€ ë‘˜ë‹¤ 0ì¼ë•Œ ë¬´í•œ ë£¨í”„ ë°©ì§€
+				for(int q=0;q<j;q=q+1) { //table2ì„¸ë¡œ
+					for(int p=0;p<i;p=p+1) { // table2 ê°€ë¡œ
 							if(table[j][i]==table2[q][p]) {
-								System.out.println("Áßº¹"); //°¡·ÎÁÙ¸¸Ã¼Å©
+								System.out.println("ì¤‘ë³µ"); //ê°€ë¡œì¤„ë§Œì²´í¬
 								i--;
 						}
 					}
